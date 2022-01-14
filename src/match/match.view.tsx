@@ -1,20 +1,18 @@
 import React from 'react';
-import {
-    Text,
-    useColorScheme,
-    View,
-} from 'react-native';
-import styles from './match.style';
+import { Text, useColorScheme, View } from 'react-native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-const Section: React.FC<{
+import MatchStyle from './match.style';
+
+const Match: React.FC<{
     title: string;
 }> = ({ children, title }) => {
     const isDarkMode = useColorScheme() === 'dark';
     return (
-        <View style={styles.sectionContainer}>
+        <View style={MatchStyle.sectionContainer}>
             <Text
                 style={[
-                    styles.sectionTitle,
+                    MatchStyle.sectionTitle,
                     {
                         color: isDarkMode ? Colors.white : Colors.black,
                     },
@@ -23,7 +21,7 @@ const Section: React.FC<{
             </Text>
             <Text
                 style={[
-                    styles.sectionDescription,
+                    MatchStyle.sectionDescription,
                     {
                         color: isDarkMode ? Colors.light : Colors.dark,
                     },
@@ -34,4 +32,4 @@ const Section: React.FC<{
     );
 };
 
-export default Section
+export default Match

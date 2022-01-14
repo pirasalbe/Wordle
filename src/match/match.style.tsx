@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
+const MatchStyle = StyleSheet.create({
     sectionContainer: {
         marginTop: 32,
         paddingHorizontal: 24,
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default styles;
+export default MatchStyle;
