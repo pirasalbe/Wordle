@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
+import Grid from './grid/grid.component';
 import Keyboard from './keyboard/keyboard.component';
 import MatchStyle from './match.style';
 
@@ -12,6 +13,7 @@ export default class Match extends Component {
         <Text style={[MatchStyle.sectionDescription]}>
           Hello, I am your cat!
         </Text>
+        <Grid />
         <Keyboard />
       </View>
     );
