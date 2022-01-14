@@ -1,35 +1,27 @@
-import React from 'react';
-import { Text, useColorScheme, View } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
 
 import MatchStyle from './match.style';
 
-const Match: React.FC<{
-    title: string;
-}> = ({ children, title }) => {
-    const isDarkMode = useColorScheme() === 'dark';
+class Match extends Component {
+  render() {
     return (
         <View style={MatchStyle.sectionContainer}>
             <Text
                 style={[
-                    MatchStyle.sectionTitle,
-                    {
-                        color: isDarkMode ? Colors.white : Colors.black,
-                    },
+                    MatchStyle.sectionTitle
                 ]}>
-                {title}
+                Cat
             </Text>
             <Text
                 style={[
-                    MatchStyle.sectionDescription,
-                    {
-                        color: isDarkMode ? Colors.light : Colors.dark,
-                    },
+                    MatchStyle.sectionDescription
                 ]}>
-                {children}
+                Hello, I am your cat!
             </Text>
         </View>
     );
-};
+  }
+}
 
-export default Match
+export default Match;
